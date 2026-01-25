@@ -1,0 +1,30 @@
+.hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: var(--bg-color);
+}
+
+.content {
+  max-width: 900px;
+}
+
+.title {
+  font-size: clamp(3rem, 10vw, 8rem);
+  line-height: 0.9;
+  margin-bottom: 20px;
+}
+
+.title span {
+  color: var(--secondary-color);
+  font-style: italic;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: var(--secondary-color);
+  max-width: 500px;
+  margin: 0 auto;
+}

@@ -1,0 +1,41 @@
+.section {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  padding: 0;
+  background-color: var(--bg-color);
+}
+
+.sticky {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.header {
+  padding: 0 5vw;
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.title {
+  font-size: clamp(2rem, 5vw, 4rem);
+  text-transform: uppercase;
+}
+
+.counter {
+  font-size: 1.2rem;
+  font-family: var(--font-main);
+  color: var(--secondary-color);
+}
+
+.container {
+  display: flex;
+  gap: 5vw;
+  padding: 0 5vw;
+  width: fit-content;
+}
