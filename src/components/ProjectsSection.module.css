@@ -3,57 +3,98 @@
   width: 100%;
   overflow: hidden;
   padding: 0;
-  background-color: var(--bg-color);
+  isolation: isolate;
+  z-index: 3;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0)),
+    #0c1222;
   color: var(--text-color);
 }
 
 .sticky {
+  position: relative;
+  z-index: 2;
   min-height: 100vh;
   min-height: 100svh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   overflow: hidden;
-  padding: 120px 0 80px;
+  padding: 150px 0 90px;
 }
 
 .header {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(260px, 360px);
+  gap: 32px;
   padding: 0 5vw;
-  margin-bottom: 40px;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
+  margin-bottom: 48px;
+  align-items: end;
   color: var(--text-color);
   position: relative;
   z-index: 2;
   will-change: transform, opacity;
 }
 
-.title {
-  font-size: clamp(2rem, 5vw, 4rem);
+.headingBlock {
+  max-width: 780px;
+}
+
+.eyebrow {
+  margin-bottom: 18px;
+  color: var(--accent-soft);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
+}
+
+.title {
+  font-size: clamp(2.4rem, 5.2vw, 4.8rem);
+  line-height: 0.95;
   color: var(--text-color);
+  text-wrap: balance;
+}
+
+.headerMeta {
+  display: grid;
+  gap: 12px;
+  justify-items: start;
 }
 
 .counter {
-  font-size: 1.2rem;
+  font-size: clamp(3rem, 6vw, 4.6rem);
+  line-height: 0.9;
+  color: var(--text-strong);
+  font-family: var(--font-display);
+}
+
+.intro {
+  max-width: 28ch;
+  font-size: 0.98rem;
+  line-height: 1.7;
   font-family: var(--font-main);
   color: var(--secondary-color);
 }
 
 .container {
   display: flex;
-  gap: 5vw;
-  padding: 0 5vw;
+  gap: clamp(24px, 2.6vw, 36px);
+  padding: 0 5vw 24px;
   width: fit-content;
   align-items: flex-start;
   will-change: transform;
 }
 
 @media (max-width: 768px) {
+  .section {
+    overflow: visible;
+    z-index: 1;
+  }
+
   .sticky {
     min-height: auto;
-    padding: 120px 5vw 80px;
+    padding: 120px 5vw 140px;
     justify-content: flex-start;
     overflow: visible;
   }
@@ -61,12 +102,13 @@
   .header {
     padding: 0;
     margin-bottom: 32px;
+    grid-template-columns: 1fr;
   }
 
   .container {
     width: 100%;
     flex-direction: column;
-    gap: 48px;
+    gap: 56px;
     padding: 0;
   }
 }

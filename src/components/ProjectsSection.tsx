@@ -27,14 +27,18 @@ export default function ProjectsSection() {
             mm.add("(min-width: 769px)", () => {
                 const getScrollDistance = () =>
                     Math.max(0, container.scrollWidth - section.clientWidth);
+                const getScrollEnd = () =>
+                    getScrollDistance() + window.innerHeight * 0.35;
 
                 const timeline = gsap.timeline({
                     scrollTrigger: {
                         trigger: section,
                         pin: true,
                         scrub: 1,
+                        pinSpacing: true,
+                        anticipatePin: 1,
                         start: "top top",
-                        end: () => `+=${getScrollDistance()}`,
+                        end: () => `+=${getScrollEnd()}`,
                         invalidateOnRefresh: true,
                     },
                 });
@@ -76,8 +80,19 @@ export default function ProjectsSection() {
         <section id="work" ref={sectionRef} className={styles.section}>
             <div className={styles.sticky}>
                 <div ref={headerRef} className={styles.header}>
-                    <h2 className={styles.title}>Selected Works</h2>
-                    <span className={styles.counter}>/ 04</span>
+                    <div className={styles.headingBlock}>
+                        <p className={styles.eyebrow}>Selected Work</p>
+                        <h2 className={styles.title}>
+                            Proof I can make digital products feel expensive, fast, and memorable.
+                        </h2>
+                    </div>
+                    <div className={styles.headerMeta}>
+                        <span className={styles.counter}>0{PROJECTS.length}</span>
+                        <p className={styles.intro}>
+                            A horizontally paced reel of projects built around clarity, motion, and
+                            frontend systems that teams can grow with.
+                        </p>
+                    </div>
                 </div>
                 <div ref={containerRef} className={styles.container}>
                     {PROJECTS.map((project) => (
