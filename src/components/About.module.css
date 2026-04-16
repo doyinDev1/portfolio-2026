@@ -2,8 +2,8 @@
   min-height: 100vh;
   display: flex;
   align-items: center;
-  background-color: var(--accent-color);
-  color: var(--bg-color);
+  background: linear-gradient(180deg, #050505 0%, #111111 100%);
+  color: var(--text-color);
 }
 
 .container {
@@ -16,18 +16,19 @@
   font-weight: 600;
   text-transform: uppercase;
   margin-bottom: 30px;
-  color: var(--secondary-color);
+  color: rgba(245, 245, 247, 0.7);
 }
 
 .heading {
   font-size: clamp(2rem, 6vw, 4.5rem);
   line-height: 1.1;
   margin-bottom: 40px;
+  color: var(--text-color);
 }
 
 .description {
   font-size: clamp(1.1rem, 2vw, 1.5rem);
   max-width: 700px;
   line-height: 1.5;
-  opacity: 0.8;
+  color: rgba(245, 245, 247, 0.82);
 }

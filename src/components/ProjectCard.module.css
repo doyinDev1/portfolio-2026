@@ -2,6 +2,7 @@
   width: 50vw;
   min-width: 400px;
   flex-shrink: 0;
+  color: var(--text-color);
 }
 
 .imageWrapper {
@@ -42,6 +43,7 @@
 .year {
   font-size: 0.9rem;
   font-weight: 500;
+  color: var(--text-color);
 }
 
 .info {
@@ -51,6 +53,7 @@
 .projectTitle {
   font-size: 1.5rem;
   margin-bottom: 5px;
+  color: var(--text-color);
 }
 
 .category {
@@ -62,7 +65,7 @@
 
 @media (max-width: 768px) {
   .card {
-    width: 85vw;
-    min-width: auto;
+    width: 100%;
+    min-width: 0;
   }
 }

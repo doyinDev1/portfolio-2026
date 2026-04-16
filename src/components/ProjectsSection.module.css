@@ -4,14 +4,17 @@
   overflow: hidden;
   padding: 0;
   background-color: var(--bg-color);
+  color: var(--text-color);
 }
 
 .sticky {
-  height: 100vh;
+  min-height: 100vh;
+  min-height: 100svh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   overflow: hidden;
+  padding: 120px 0 80px;
 }
 
 .header {
@@ -20,11 +23,16 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
+  color: var(--text-color);
+  position: relative;
+  z-index: 2;
+  will-change: transform, opacity;
 }
 
 .title {
   font-size: clamp(2rem, 5vw, 4rem);
   text-transform: uppercase;
+  color: var(--text-color);
 }
 
 .counter {
@@ -38,4 +46,27 @@
   gap: 5vw;
   padding: 0 5vw;
   width: fit-content;
+  align-items: flex-start;
+  will-change: transform;
+}
+
+@media (max-width: 768px) {
+  .sticky {
+    min-height: auto;
+    padding: 120px 5vw 80px;
+    justify-content: flex-start;
+    overflow: visible;
+  }
+
+  .header {
+    padding: 0;
+    margin-bottom: 32px;
+  }
+
+  .container {
+    width: 100%;
+    flex-direction: column;
+    gap: 48px;
+    padding: 0;
+  }
 }

@@ -41,7 +41,7 @@ export const PROJECTS: Project[] = [
     title: "Solaris Mobile",
     description: "A sustainable energy tracking app for individual households.",
     category: "Mobile UI/UX",
-    image: "https://images.unsplash.com/photo-1466611653911-954ffea11271?q=80&w=2670&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?q=80&w=2670&auto=format&fit=crop",
     link: "https://example.com",
     year: "2023",
   },

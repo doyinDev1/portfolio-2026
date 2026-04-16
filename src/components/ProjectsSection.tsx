@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useLayoutEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { PROJECTS } from "@/constants/projects";
@@ -10,32 +10,63 @@ import styles from "./ProjectsSection.module.css";
 gsap.registerPlugin(ScrollTrigger);
 
 export default function ProjectsSection() {
-    const sectionRef = useRef<HTMLDivElement>(null);
+    const sectionRef = useRef<HTMLElement>(null);
     const containerRef = useRef<HTMLDivElement>(null);
+    const headerRef = useRef<HTMLDivElement>(null);
 
-    useEffect(() => {
+    useLayoutEffect(() => {
         const section = sectionRef.current;
         const container = containerRef.current;
+        const header = headerRef.current;
 
-        if (!section || !container) return;
-
-        const totalWidth = container.scrollWidth;
-        const viewportWidth = window.innerWidth;
-        const scrollDistance = totalWidth - viewportWidth;
+        if (!section || !container || !header) return;
 
         const ctx = gsap.context(() => {
-            gsap.to(container, {
-                x: -scrollDistance,
-                ease: "none",
-                scrollTrigger: {
-                    trigger: section,
-                    pin: true,
-                    scrub: 1,
-                    start: "top top",
-                    end: () => `+=${scrollDistance}`,
-                    invalidateOnRefresh: true,
-                },
+            const mm = gsap.matchMedia();
+
+            mm.add("(min-width: 769px)", () => {
+                const getScrollDistance = () =>
+                    Math.max(0, container.scrollWidth - section.clientWidth);
+
+                const timeline = gsap.timeline({
+                    scrollTrigger: {
+                        trigger: section,
+                        pin: true,
+                        scrub: 1,
+                        start: "top top",
+                        end: () => `+=${getScrollDistance()}`,
+                        invalidateOnRefresh: true,
+                    },
+                });
+
+                timeline.to(
+                    container,
+                    {
+                        x: () => -getScrollDistance(),
+                        ease: "none",
+                    },
+                    0
+                );
+
+                timeline.to(
+                    header,
+                    {
+                        yPercent: -140,
+                        opacity: 0,
+                        ease: "power1.out",
+                    },
+                    0
+                );
+
+                ScrollTrigger.refresh();
             });
+
+            mm.add("(max-width: 768px)", () => {
+                gsap.set(container, { clearProps: "all" });
+                gsap.set(header, { clearProps: "all" });
+            });
+
+            return () => mm.revert();
         }, section);
 
         return () => ctx.revert();
@@ -44,7 +75,7 @@ export default function ProjectsSection() {
     return (
         <section id="work" ref={sectionRef} className={styles.section}>
             <div className={styles.sticky}>
-                <div className={styles.header}>
+                <div ref={headerRef} className={styles.header}>
                     <h2 className={styles.title}>Selected Works</h2>
                     <span className={styles.counter}>/ 04</span>
                 </div>
