@@ -1,21 +1,22 @@
 import type { Metadata } from "next";
-import { Inter, Outfit } from "next/font/google";
+import { Manrope, Unbounded } from "next/font/google";
 import "./globals.css";
 import SmoothScroll from "@/components/SmoothScroll";
 
-const inter = Inter({
+const manrope = Manrope({
   variable: "--font-inter",
   subsets: ["latin"],
 });
 
-const outfit = Outfit({
-  variable: "--font-outfit",
+const unbounded = Unbounded({
+  variable: "--font-display-face",
   subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
-  title: "Frontend Engineer Portfolio | Modern Experience",
-  description: "A high-performance portfolio showcasing modern frontend engineering and creative animations.",
+  title: "Adedoyin | Frontend Engineer & Creative Technologist",
+  description:
+    "A high-performance portfolio shaped around cinematic motion, premium interfaces, and frontend systems thinking.",
 };
 
 export default function RootLayout({
@@ -25,10 +26,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} ${outfit.variable}`}>
-        <SmoothScroll>
-          {children}
-        </SmoothScroll>
+      <body className={`${manrope.className} ${manrope.variable} ${unbounded.variable}`}>
+        <SmoothScroll>{children}</SmoothScroll>
       </body>
     </html>
   );
