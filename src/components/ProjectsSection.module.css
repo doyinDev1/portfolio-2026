@@ -9,6 +9,8 @@
     linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0)),
     #0c1222;
   color: var(--text-color);
+  /* padding-top: 40px;
+  padding-bottom: 100px; */
 }
 
 .sticky {

@@ -4,6 +4,8 @@
   min-height: 100vh;
   display: flex;
   align-items: center;
+  padding-top: 40px;
+  padding-bottom: 100px;
   background:
     radial-gradient(circle at top right, rgba(255, 122, 69, 0.12), transparent 26%),
     linear-gradient(180deg, #090d18 0%, #0e1426 100%);
