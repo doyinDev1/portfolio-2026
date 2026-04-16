@@ -11,7 +11,7 @@
 
 .shell {
   display: grid;
-  grid-template-columns: minmax(0, 1.2fr) minmax(320px, 0.8fr);
+  grid-template-columns: minmax(0, 1.05fr) minmax(320px, 0.95fr);
   gap: clamp(32px, 4vw, 56px);
   align-items: end;
 }
@@ -43,6 +43,7 @@
 .copy {
   position: relative;
   z-index: 1;
+  max-width: 760px;
 }
 
 .eyebrow {
@@ -62,9 +63,9 @@
 }
 
 .title {
-  max-width: 11ch;
-  font-size: clamp(3.9rem, 9vw, 8.4rem);
-  line-height: 0.92;
+  max-width: 8.5ch;
+  font-size: clamp(3.3rem, 7vw, 6.6rem);
+  line-height: 0.95;
   color: var(--text-strong);
   text-wrap: balance;
 }
@@ -74,18 +75,18 @@
 }
 
 .lead {
-  max-width: 620px;
-  margin-top: 26px;
+  max-width: 34rem;
+  margin-top: 22px;
   color: var(--secondary-color);
-  font-size: clamp(1.05rem, 1.8vw, 1.3rem);
-  line-height: 1.75;
+  font-size: clamp(1rem, 1.4vw, 1.16rem);
+  line-height: 1.7;
 }
 
 .actions {
   display: flex;
   flex-wrap: wrap;
   gap: 14px;
-  margin-top: 34px;
+  margin-top: 30px;
 }
 
 .primaryAction,
@@ -120,35 +121,6 @@
   transform: translateY(-2px);
 }
 
-.metrics {
-  list-style: none;
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 18px;
-  margin-top: 48px;
-}
-
-.metrics li {
-  padding: 20px 20px 22px;
-  border-radius: 24px;
-  border: 1px solid var(--border-color);
-  background: rgba(255, 255, 255, 0.03);
-  backdrop-filter: blur(18px);
-}
-
-.metrics strong {
-  display: block;
-  margin-bottom: 12px;
-  font-size: 1rem;
-  letter-spacing: -0.02em;
-  color: var(--text-strong);
-}
-
-.metrics span {
-  color: var(--secondary-color);
-  line-height: 1.6;
-  font-size: 0.95rem;
-}
 
 .panel {
   position: relative;
@@ -247,7 +219,7 @@
   width: max-content;
   gap: 26px;
   padding: 16px 0;
-  animation: marquee 22s linear infinite;
+  animation: marquee 60s linear infinite;
 }
 
 .marqueeTrack span {
@@ -275,7 +247,7 @@
   }
 
   .title {
-    max-width: 13ch;
+    max-width: 10ch;
   }
 
   .panelLead {
@@ -289,11 +261,8 @@
   }
 
   .title {
-    font-size: clamp(3rem, 14vw, 4.8rem);
-  }
-
-  .metrics {
-    grid-template-columns: 1fr;
+    max-width: 9ch;
+    font-size: clamp(2.8rem, 13vw, 4.4rem);
   }
 
   .panel {

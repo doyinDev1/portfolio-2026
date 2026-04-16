@@ -83,14 +83,13 @@ export default function ProjectsSection() {
                     <div className={styles.headingBlock}>
                         <p className={styles.eyebrow}>Selected Work</p>
                         <h2 className={styles.title}>
-                            Proof I can make digital products feel expensive, fast, and memorable.
+                            Selected projects with strong visuals, clean systems, and proper frontend craft.
                         </h2>
                     </div>
                     <div className={styles.headerMeta}>
                         <span className={styles.counter}>0{PROJECTS.length}</span>
                         <p className={styles.intro}>
-                            A horizontally paced reel of projects built around clarity, motion, and
-                            frontend systems that teams can grow with.
+                            A cleaner horizontal reel so each project lands properly in view.
                         </p>
                     </div>
                 </div>

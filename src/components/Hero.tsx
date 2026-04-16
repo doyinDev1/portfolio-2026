@@ -3,13 +3,13 @@
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import styles from "./Hero.module.css";
+import { MARQUEE_TEXT } from "@/constants/projects";
 
 export default function Hero() {
     const eyebrowRef = useRef<HTMLParagraphElement>(null);
     const titleRef = useRef<HTMLHeadingElement>(null);
     const leadRef = useRef<HTMLParagraphElement>(null);
     const actionsRef = useRef<HTMLDivElement>(null);
-    const metricsRef = useRef<HTMLUListElement>(null);
     const panelRef = useRef<HTMLDivElement>(null);
     const marqueeRef = useRef<HTMLDivElement>(null);
 
@@ -34,7 +34,7 @@ export default function Hero() {
                 "-=0.7"
             )
             .fromTo(
-                [actionsRef.current, metricsRef.current, panelRef.current, marqueeRef.current],
+                [actionsRef.current, panelRef.current, marqueeRef.current],
                 { y: 28, opacity: 0 },
                 { y: 0, opacity: 1, duration: 0.8, stagger: 0.12 },
                 "-=0.45"
@@ -51,12 +51,11 @@ export default function Hero() {
                         Lagos / Remote Worldwide / Frontend Engineer
                     </p>
                     <h1 ref={titleRef} className={styles.title}>
-                        I build interfaces that <span>steal the room</span> and still ship at
-                        <span> product speed.</span>
+                        Premium interfaces. <span>Built to perform.</span>
                     </h1>
                     <p ref={leadRef} className={styles.lead}>
-                        The work lives where design taste, motion discipline, accessibility, and
-                        frontend systems all meet. Premium feel, zero fluff, measurable outcomes.
+                        Frontend engineering for ambitious products that need taste, motion, and
+                        clean systems working together.
                     </p>
                     <div ref={actionsRef} className={styles.actions}>
                         <a href="#work" className={styles.primaryAction}>
@@ -66,20 +65,6 @@ export default function Hero() {
                             Book a build sprint
                         </a>
                     </div>
-                    <ul ref={metricsRef} className={styles.metrics}>
-                        <li>
-                            <strong>60fps</strong>
-                            <span>Motion that earns attention without slowing product down.</span>
-                        </li>
-                        <li>
-                            <strong>Design-minded</strong>
-                            <span>Sharp typography, pacing, hierarchy, and UI restraint.</span>
-                        </li>
-                        <li>
-                            <strong>System-first</strong>
-                            <span>Reusable components and architecture teams can actually scale.</span>
-                        </li>
-                    </ul>
                 </div>
 
                 <div ref={panelRef} className={styles.panel}>
@@ -114,18 +99,9 @@ export default function Hero() {
             </div>
             <div ref={marqueeRef} className={styles.marquee}>
                 <div className={styles.marqueeTrack}>
-                    <span>Frontend Systems</span>
-                    <span>Creative Direction</span>
-                    <span>Motion Design</span>
-                    <span>Performance</span>
-                    <span>Design Systems</span>
-                    <span>Accessibility</span>
-                    <span>Frontend Systems</span>
-                    <span>Creative Direction</span>
-                    <span>Motion Design</span>
-                    <span>Performance</span>
-                    <span>Design Systems</span>
-                    <span>Accessibility</span>
+                    {MARQUEE_TEXT.map((text, index) => (
+                        <span key={index}>{text}</span>
+                    ))}
                 </div>
             </div>
         </section>

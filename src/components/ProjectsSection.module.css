@@ -18,9 +18,9 @@
   min-height: 100svh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   overflow: hidden;
-  padding: 150px 0 90px;
+  padding: 120px 0 40px;
 }
 
 .header {
@@ -28,7 +28,7 @@
   grid-template-columns: minmax(0, 1fr) minmax(260px, 360px);
   gap: 32px;
   padding: 0 5vw;
-  margin-bottom: 48px;
+  margin-bottom: 20px;
   align-items: end;
   color: var(--text-color);
   position: relative;
@@ -37,7 +37,7 @@
 }
 
 .headingBlock {
-  max-width: 780px;
+  max-width: 700px;
 }
 
 .eyebrow {
@@ -50,8 +50,8 @@
 }
 
 .title {
-  font-size: clamp(2.4rem, 5.2vw, 4.8rem);
-  line-height: 0.95;
+  font-size: clamp(2rem, 4vw, 3.6rem);
+  line-height: 1;
   color: var(--text-color);
   text-wrap: balance;
 }
@@ -63,27 +63,48 @@
 }
 
 .counter {
-  font-size: clamp(3rem, 6vw, 4.6rem);
+  font-size: clamp(2.5rem, 5vw, 4rem);
   line-height: 0.9;
   color: var(--text-strong);
   font-family: var(--font-display);
 }
 
 .intro {
-  max-width: 28ch;
-  font-size: 0.98rem;
-  line-height: 1.7;
+  max-width: 24ch;
+  font-size: 0.92rem;
+  line-height: 1.6;
   font-family: var(--font-main);
   color: var(--secondary-color);
 }
 
 .container {
   display: flex;
-  gap: clamp(24px, 2.6vw, 36px);
-  padding: 0 5vw 24px;
+  flex: 1;
+  min-height: 0;
+  gap: clamp(20px, 2vw, 28px);
+  padding: 0 6vw 0 5vw;
   width: fit-content;
-  align-items: flex-start;
+  align-items: center;
   will-change: transform;
+}
+
+@media (min-width: 769px) {
+  .sticky {
+    height: 100vh;
+    height: 100svh;
+  }
+
+  .headingBlock {
+    max-width: 620px;
+  }
+
+  .title {
+    font-size: clamp(1.8rem, 3.2vw, 3rem);
+  }
+
+  .counter {
+    font-size: clamp(2.2rem, 4vw, 3.2rem);
+  }
 }
 
 @media (max-width: 768px) {
@@ -93,6 +114,7 @@
   }
 
   .sticky {
+    height: auto;
     min-height: auto;
     padding: 120px 5vw 140px;
     justify-content: flex-start;
