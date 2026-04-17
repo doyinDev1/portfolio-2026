@@ -1,4 +1,11 @@
+ "use client";
+
+import { useEffect, useRef } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import styles from "./LocalSeoSection.module.css";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const SERVICES = [
     {
@@ -42,8 +49,69 @@ const FAQS = [
 ];
 
 export default function LocalSeoSection() {
+    const sectionRef = useRef<HTMLElement>(null);
+
+    useEffect(() => {
+        if (!sectionRef.current) return;
+
+        const ctx = gsap.context(() => {
+            gsap.fromTo(
+                `.${styles.intro}`,
+                { y: 40, opacity: 0 },
+                {
+                    y: 0,
+                    opacity: 1,
+                    duration: 0.9,
+                    ease: "power3.out",
+                    scrollTrigger: {
+                        trigger: sectionRef.current,
+                        start: "top 75%",
+                    },
+                }
+            );
+
+            gsap.fromTo(
+                `.${styles.card}`,
+                { y: 36, opacity: 0 },
+                {
+                    y: 0,
+                    opacity: 1,
+                    duration: 0.8,
+                    stagger: 0.12,
+                    ease: "power3.out",
+                    scrollTrigger: {
+                        trigger: `.${styles.services}`,
+                        start: "top 78%",
+                    },
+                }
+            );
+
+            gsap.fromTo(
+                [`.${styles.faqTitle}`, `.${styles.faqItem}`],
+                { y: 32, opacity: 0 },
+                {
+                    y: 0,
+                    opacity: 1,
+                    duration: 0.75,
+                    stagger: 0.1,
+                    ease: "power3.out",
+                    scrollTrigger: {
+                        trigger: `.${styles.faq}`,
+                        start: "top 80%",
+                    },
+                }
+            );
+        }, sectionRef);
+
+        return () => ctx.revert();
+    }, []);
+
     return (
-        <section className={styles.section} aria-labelledby="lagos-frontend-heading">
+        <section
+            ref={sectionRef}
+            className={styles.section}
+            aria-labelledby="lagos-frontend-heading"
+        >
             <div className={`${styles.container} container`}>
                 <div className={styles.intro}>
                     <p className={styles.label}>Frontend Developer in Nigeria</p>
