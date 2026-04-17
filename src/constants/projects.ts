@@ -3,51 +3,42 @@ export interface Project {
   title: string;
   description: string;
   category: string;
-  image: string;
-  link: string;
+  image?: string;
+  link?: string;
   year: string;
 }
 
 export const PROJECTS: Project[] = [
   {
     id: 1,
-    title: "Atlas Commerce",
+    title: "Kreda",
     description:
-      "A luxury storefront rebuilt around speed, sharper storytelling, and a checkout flow that feels frictionless.",
-    category: "E-commerce Experience",
-    image: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=2564&auto=format&fit=crop",
-    link: "https://example.com",
+      "Built for businesses that trade phones and devices. Track inventory accurately, manage device conditions, control pricing, and run daily operations without chaos; built for phone sellers, swap businesses, and repair centers.",
+    category: "Inventory and Operations Platform",
     year: "2026",
+    link: "https://kreda.ng",
+    image: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=2564&auto=format&fit=crop",
   },
   {
     id: 2,
-    title: "Signal OS",
+    title: "RHMSTECH",
     description:
-      "A data-dense SaaS dashboard with motion-guided hierarchy, systemized components, and crisp interaction design.",
-    category: "Product Dashboard",
-    image: "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?q=80&w=2670&auto=format&fit=crop",
-    link: "https://example.com",
+      "Swap, buy, and sell your Apple devices fast and hassle-free in Lagos. Built to help users upgrade, sell, repair, and shop iPhones, MacBooks, and Apple Watches with fast service, competitive pricing, and payment-on-delivery options.",
+    category: "Device Marketplace and Repair Platform",
     year: "2025",
+    link: "https://rhmstech.com/",
+    image: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=2564&auto=format&fit=crop",
+
   },
   {
     id: 3,
-    title: "Astra Studio",
+    title: "ICE SOLAR",
     description:
-      "An editorial portfolio for a design brand that needed motion, hierarchy, and performance to feel equally premium.",
-    category: "Brand Experience",
-    image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=2672&auto=format&fit=crop",
-    link: "https://example.com",
-    year: "2024",
-  },
-  {
-    id: 4,
-    title: "Northstar Mobile",
-    description:
-      "A mobile-first product interface designed to feel elegant, calm, and instantly legible under real-world usage.",
-    category: "Mobile Product Design",
-    image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=2672&auto=format&fit=crop",
-    link: "https://example.com",
-    year: "2025",
+    "Connecting the unconnected through digital technology that empowers underserved small businesses for sustainable transformation.",
+    category: "Digital Transformation Platform",
+    year: "2023",
+    link: "https://icesolar.co",
+    image: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=2564&auto=format&fit=crop",
   },
 ];
 

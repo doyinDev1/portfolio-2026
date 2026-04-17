@@ -89,7 +89,7 @@ export default function ProjectsSection() {
                     <div className={styles.headerMeta}>
                         <span className={styles.counter}>0{PROJECTS.length}</span>
                         <p className={styles.intro}>
-                            A cleaner horizontal reel so each project lands properly in view.
+                            Selected projects that I have worked on
                         </p>
                     </div>
                 </div>
