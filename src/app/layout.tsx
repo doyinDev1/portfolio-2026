@@ -14,9 +14,46 @@ const unbounded = Unbounded({
 });
 
 export const metadata: Metadata = {
-  title: "Adedoyin | Frontend Engineer & Creative Technologist",
+  title: "Frontend Developer in Nigeria, Based in Lagos | Adedoyin",
   description:
-    "A high-performance portfolio shaped around cinematic motion, premium interfaces, and frontend systems thinking.",
+    "Adedoyin is a frontend developer in Nigeria, based in Lagos, building high-performance websites, SaaS frontends, and polished product interfaces for startups, brands, and remote teams worldwide.",
+  keywords: [
+    "frontend developer in Lagos",
+    "frontend developer Lagos",
+    "frontend engineer Lagos",
+    "React developer Lagos",
+    "Next.js developer Lagos",
+    "web developer Lagos Nigeria",
+    "frontend developer Nigeria",
+    "UI engineer Lagos",
+    "JavaScript developer Lagos",
+  ],
+  authors: [{ name: "Adedoyin" }],
+  creator: "Adedoyin",
+  publisher: "Adedoyin",
+  category: "technology",
+  robots: {
+    index: true,
+    follow: true,
+  },
+  openGraph: {
+    title: "Frontend Developer in Nigeria, Based in Lagos | Adedoyin",
+    description:
+      "Frontend developer in Nigeria, based in Lagos, building premium web experiences, SaaS interfaces, and high-performance product frontends for startups and brands worldwide.",
+    type: "website",
+    locale: "en_NG",
+    siteName: "Adedoyin Portfolio",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Frontend Developer in Nigeria, Based in Lagos | Adedoyin",
+    description:
+      "Frontend developer in Nigeria, based in Lagos, building premium web experiences, SaaS interfaces, and high-performance product frontends.",
+  },
+  other: {
+    "geo.region": "NG-LA",
+    "geo.placename": "Lagos",
+  },
 };
 
 export default function RootLayout({

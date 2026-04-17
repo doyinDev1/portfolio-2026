@@ -48,14 +48,14 @@ export default function Hero() {
             <div className={`${styles.shell} container`}>
                 <div className={styles.copy}>
                     <p ref={eyebrowRef} className={styles.eyebrow}>
-                        Lagos / Remote Worldwide / Frontend Engineer
+                        Based in Lagos, Nigeria / Available Worldwide
                     </p>
                     <h1 ref={titleRef} className={styles.title}>
-                        Premium interfaces. <span>Built to perform.</span>
+                        Frontend developer in Nigeria. <span>Premium interfaces that perform.</span>
                     </h1>
                     <p ref={leadRef} className={styles.lead}>
-                        Frontend engineering for ambitious products that need taste, motion, and
-                        clean systems working together.
+                        Based in Lagos, Nigeria, I build fast, polished websites and product
+                        interfaces for startups, brands, and teams working locally and remotely worldwide.
                     </p>
                     <div ref={actionsRef} className={styles.actions}>
                         <a href="#work" className={styles.primaryAction}>
@@ -70,12 +70,12 @@ export default function Hero() {
                 <div ref={panelRef} className={styles.panel}>
                     <div className={styles.panelHeader}>
                         <span className={styles.panelKicker}>Current Edge</span>
-                        <span className={styles.panelPill}>Available for select work</span>
+                        <span className={styles.panelPill}>Lagos-based. Remote-ready.</span>
                     </div>
                     <div className={styles.panelBody}>
                         <p className={styles.panelLead}>
-                            Beautiful products are not enough. They need clarity, speed, and a
-                            front-end that feels inevitable.
+                            I help startups and product teams turn good design into fast, credible,
+                            conversion-ready frontend experiences.
                         </p>
                         <div className={styles.signalGrid}>
                             <article>

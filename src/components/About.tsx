@@ -9,19 +9,19 @@ gsap.registerPlugin(ScrollTrigger);
 
 const PILLARS = [
     {
-        title: "Design taste in code",
+        title: "React and Next.js development",
         description:
-            "I care about type, spacing, rhythm, and motion enough to preserve the design idea all the way through implementation.",
+            "I build React and Next.js frontends for startups and product teams that need speed, clarity, and a polished user experience.",
     },
     {
-        title: "Performance without compromise",
+        title: "Performance and UI engineering",
         description:
-            "I like products that look cinematic but still load quickly, stay accessible, and remain stable under real interaction.",
+            "My frontend work balances motion, responsiveness, accessibility, and performance so the experience feels premium without becoming heavy.",
     },
     {
-        title: "Systems teams can scale",
+        title: "Scalable systems for teams",
         description:
-            "The goal is never a clever one-off. It is a design system and frontend structure a product team can trust long-term.",
+            "I create reusable components and frontend structure that help growing teams ship faster with consistency.",
     },
 ];
 
@@ -51,14 +51,16 @@ export default function About() {
         <section id="about" className={styles.about}>
             <div className={`${styles.container} container`} ref={textRef}>
                 <div className={styles.intro}>
-                    <p className={styles.label}>Why teams bring me in</p>
+                    <p className={styles.label}>Based in Lagos, Nigeria</p>
                     <h2 className={styles.heading}>
-                        I build products that bridge the gap between design and technology.
+                        I help startups and product teams build fast, polished digital products.
                     </h2>
                     <p className={styles.description}>
-                        I work best on ambitious digital products that need more than a good UI.
-                        They need hierarchy, motion, performance, accessibility, and frontend
-                        architecture to move as one. That is the lane I love.
+                        If you are looking for a frontend developer based in Lagos, Nigeria who can
+                        handle product thinking, interface quality, motion, and code structure
+                        together, that is exactly where I do my best work. I partner with teams in
+                        Nigeria and remote companies worldwide that need premium frontend execution
+                        without the usual mess.
                     </p>
                 </div>
 
