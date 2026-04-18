@@ -9,19 +9,19 @@ gsap.registerPlugin(ScrollTrigger);
 
 const PILLARS = [
     {
-        title: "React and Next.js development",
+        title: "React and Next.js for production products",
         description:
-            "I build React and Next.js frontends for startups and product teams that need speed, clarity, and a polished user experience.",
+            "I build product frontends with React, Next.js, and TypeScript for teams that need reliable delivery, maintainable code, and a polished user experience.",
     },
     {
-        title: "Performance and UI engineering",
+        title: "Performance, accessibility, and UX polish",
         description:
-            "My frontend work balances motion, responsiveness, accessibility, and performance so the experience feels premium without becoming heavy.",
+            "I care about the details users notice immediately: load speed, interaction quality, responsiveness, accessibility, and interface clarity.",
     },
     {
-        title: "Scalable systems for teams",
+        title: "Frontend decisions that support growth",
         description:
-            "I create reusable components and frontend structure that help growing teams ship faster with consistency.",
+            "I bring product thinking to implementation so the frontend does more than look good. It helps teams ship faster and helps users move with less friction.",
     },
 ];
 
@@ -51,16 +51,16 @@ export default function About() {
         <section id="about" className={styles.about}>
             <div className={`${styles.container} container`} ref={textRef}>
                 <div className={styles.intro}>
-                    <p className={styles.label}>Based in Lagos, Nigeria</p>
+                    <p className={styles.label}>About</p>
                     <h2 className={styles.heading}>
-                        I help startups and product teams build fast, polished digital products.
+                        Frontend engineering with product judgment.
                     </h2>
                     <p className={styles.description}>
-                        If you are looking for a frontend developer based in Lagos, Nigeria who can
-                        handle product thinking, interface quality, motion, and code structure
-                        together, that is exactly where I do my best work. I partner with teams in
-                        Nigeria and remote companies worldwide that need premium frontend execution
-                        without the usual mess.
+                        I am a frontend developer based in Lagos, Nigeria, working with teams
+                        across time zones. My focus is React, Next.js, performance, accessibility,
+                        and UX quality. I do my best work on products that need more than pure
+                        implementation. They need clear thinking, sharp details, and frontend
+                        decisions that support adoption, conversion, and long-term maintainability.
                     </p>
                 </div>
 

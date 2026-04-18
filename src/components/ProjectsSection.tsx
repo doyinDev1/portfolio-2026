@@ -83,13 +83,14 @@ export default function ProjectsSection() {
                     <div className={styles.headingBlock}>
                         <p className={styles.eyebrow}>Selected Work</p>
                         <h2 className={styles.title}>
-                            Selected projects with strong visuals, clean systems, and proper frontend craft.
+                            Frontend work shaped by product clarity, performance, and user impact.
                         </h2>
                     </div>
                     <div className={styles.headerMeta}>
                         <span className={styles.counter}>0{PROJECTS.length}</span>
                         <p className={styles.intro}>
-                            Selected projects that I have worked on
+                            Projects where the frontend had to do more than look good. It had to
+                            make the product easier to trust, use, and grow.
                         </p>
                     </div>
                 </div>

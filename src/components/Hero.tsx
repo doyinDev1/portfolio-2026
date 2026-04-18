@@ -48,50 +48,51 @@ export default function Hero() {
             <div className={`${styles.shell} container`}>
                 <div className={styles.copy}>
                     <p ref={eyebrowRef} className={styles.eyebrow}>
-                        Based in Lagos, Nigeria / Available Worldwide
+                        Frontend Engineer / Lagos to Worldwide / Open to Remote Roles
                     </p>
                     <h1 ref={titleRef} className={styles.title}>
-                        Frontend developer in Nigeria. <span>Premium interfaces that perform.</span>
+                        React and Next.js frontends <span>that feel fast, clear, and ready to scale.</span>
                     </h1>
                     <p ref={leadRef} className={styles.lead}>
-                        Based in Lagos, Nigeria, I build fast, polished websites and product
-                        interfaces for startups, brands, and teams working locally and remotely worldwide.
+                        I help startups and product teams ship polished web experiences with strong
+                        UX, clean frontend architecture, and performance that holds up in the real
+                        world.
                     </p>
                     <div ref={actionsRef} className={styles.actions}>
                         <a href="#work" className={styles.primaryAction}>
                             View selected work
                         </a>
                         <a href="mailto:hello@adedoyin.dev" className={styles.secondaryAction}>
-                            Book a build sprint
+                            Email me about a role
                         </a>
                     </div>
                 </div>
 
                 <div ref={panelRef} className={styles.panel}>
                     <div className={styles.panelHeader}>
-                        <span className={styles.panelKicker}>Current Edge</span>
-                        <span className={styles.panelPill}>Lagos-based. Remote-ready.</span>
+                        <span className={styles.panelKicker}>What I Bring</span>
+                        <span className={styles.panelPill}>React, Next.js, UX, performance</span>
                     </div>
                     <div className={styles.panelBody}>
                         <p className={styles.panelLead}>
-                            I help startups and product teams turn good design into fast, credible,
-                            conversion-ready frontend experiences.
+                            I build frontend systems that improve how products look, feel, and
+                            perform for real users.
                         </p>
                         <div className={styles.signalGrid}>
                             <article>
                                 <span>01</span>
-                                <h2>Motion With Restraint</h2>
-                                <p>Animation should guide focus, not audition for attention.</p>
+                                <h2>Product-minded execution</h2>
+                                <p>I think beyond screens to flows, friction, and business goals.</p>
                             </article>
                             <article>
                                 <span>02</span>
-                                <h2>Premium Product Feel</h2>
-                                <p>Interfaces that feel expensive before a user reads a word.</p>
+                                <h2>Performance-first UX</h2>
+                                <p>Fast interfaces build trust, reduce drop-off, and feel better to use.</p>
                             </article>
                             <article>
                                 <span>03</span>
-                                <h2>Engineerable Design</h2>
-                                <p>Design systems and code structure that scale with the team.</p>
+                                <h2>Scalable frontend systems</h2>
+                                <p>Reusable components and clear structure help teams ship with confidence.</p>
                             </article>
                         </div>
                     </div>

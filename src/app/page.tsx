@@ -3,7 +3,7 @@ import Hero from "@/components/Hero";
 import ProjectsSection from "@/components/ProjectsSection";
 import About from "@/components/About";
 import Footer from "@/components/Footer";
-import LocalSeoSection from "@/components/LocalSeoSection";
+import OpenToWorkSection from "@/components/OpenToWorkSection";
 import styles from "./page.module.css";
 
 export default function Home() {
@@ -15,7 +15,7 @@ export default function Home() {
         name: "Adedoyin",
         jobTitle: "Frontend Developer",
         description:
-          "Frontend developer in Nigeria, based in Lagos, building high-performance websites, SaaS frontends, and premium digital product experiences.",
+          "Frontend engineer based in Lagos, building high-performance React and Next.js products for startups and remote teams worldwide.",
         address: {
           "@type": "PostalAddress",
           addressLocality: "Lagos",
@@ -39,14 +39,14 @@ export default function Home() {
       {
         "@type": "ProfessionalService",
         name: "Adedoyin Frontend Development",
-        areaServed: ["Lagos", "Nigeria"],
+        areaServed: ["Nigeria", "Worldwide"],
         description:
-          "Frontend development services for startups, product teams, and brands in Nigeria and remote teams worldwide.",
+          "Frontend engineering services for startups, product teams, and global companies that need React, Next.js, UX refinement, and performance-focused execution.",
         serviceType: [
-          "Frontend development",
+          "Frontend engineering",
           "React development",
           "Next.js development",
-          "Landing page development",
+          "Performance optimization",
           "Design system engineering",
         ],
       },
@@ -63,7 +63,7 @@ export default function Home() {
       <Hero />
       <ProjectsSection />
       <About />
-      <LocalSeoSection />
+      <OpenToWorkSection />
       <Footer />
     </main>
   );

@@ -11,16 +11,17 @@ export default function Navigation() {
                     <span className={styles.brandMark}>AD</span>
                     <span className={styles.brandText}>
                         <strong>ADEDOYIN</strong>
-                        <small>Frontend Systems + Motion Craft</small>
+                        <small>React, Next.js, Performance, UX</small>
                     </span>
                 </Link>
                 <div className={styles.links}>
                     <Link href="#work">Work</Link>
                     <Link href="#about">About</Link>
+                    <Link href="#open-to-work">Open to Work</Link>
                     <Link href="#contact">Contact</Link>
                 </div>
-                <a href="mailto:adedoyin27@gmail.com" className={styles.cta}>
-                    Start a project
+                <a href="mailto:hello@adedoyin.dev" className={styles.cta}>
+                    Open to work
                 </a>
             </div>
         </nav>
