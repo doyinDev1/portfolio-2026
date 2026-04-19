@@ -121,7 +121,7 @@ export default function OpenToWorkSection() {
                         and clear communication, I would be glad to talk.
                     </p>
                     <div className={styles.actions}>
-                        <a href="mailto:hello@adedoyin.dev" className={styles.primaryAction}>
+                        <a href="mailto:adedoyin27@gmail.com" className={styles.primaryAction}>
                             Email me about a role
                         </a>
                         <a

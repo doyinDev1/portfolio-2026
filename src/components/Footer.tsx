@@ -12,8 +12,8 @@ export default function Footer() {
                         Next.js work?
                     </h2>
                     <div className={styles.actions}>
-                        <a href="mailto:hello@adedoyin.dev" className={styles.primaryLink}>
-                            hello@adedoyin.dev
+                        <a href="mailto:adedoyin27@gmail.com" className={styles.primaryLink}>
+                            adedoyin27@gmail.com
                         </a>
                         <a
                             href="https://www.linkedin.com/in/adedoyin-oyebanji-949a13165/"

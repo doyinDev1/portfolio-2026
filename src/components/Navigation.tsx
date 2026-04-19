@@ -20,7 +20,7 @@ export default function Navigation() {
                     <Link href="#open-to-work">Open to Work</Link>
                     <Link href="#contact">Contact</Link>
                 </div>
-                <a href="mailto:hello@adedoyin.dev" className={styles.cta}>
+                <a href="mailto:adedoyin27@gmail.com" className={styles.cta}>
                     Open to work
                 </a>
             </div>

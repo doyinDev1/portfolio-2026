@@ -51,7 +51,7 @@ export default function Hero() {
                         Frontend Engineer / Lagos to Worldwide / Open to Remote Roles
                     </p>
                     <h1 ref={titleRef} className={styles.title}>
-                        React and Next.js frontends <span>that feel fast, clear, and ready to scale.</span>
+                        Frontends <span>that feel fast, clear, and ready to scale.</span>
                     </h1>
                     <p ref={leadRef} className={styles.lead}>
                         I help startups and product teams ship polished web experiences with strong
@@ -60,9 +60,9 @@ export default function Hero() {
                     </p>
                     <div ref={actionsRef} className={styles.actions}>
                         <a href="#work" className={styles.primaryAction}>
-                            View selected work
+                            View work
                         </a>
-                        <a href="mailto:hello@adedoyin.dev" className={styles.secondaryAction}>
+                        <a href="mailto:adedoyin27@gmail.com" className={styles.secondaryAction}>
                             Email me about a role
                         </a>
                     </div>
